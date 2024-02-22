@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ECalcOperator} from '../../../enum/ECalcOperator';
 
 @Component({
   selector: 'app-calculator',
@@ -9,21 +10,21 @@ export class CalculatorComponent {
   public firstNumber: number = 1;
   public secondNumber: number = 1;
   public result: number = 0;
-  public operator: string = '+';
+  public operator: ECalcOperator = ECalcOperator.plus;
   public operators: string[] = ['+', '-', '*', '/'];
 
   public calc() {
     switch (this.operator) {
-      case '+':
+      case ECalcOperator.plus:
         this.add();
         break;
-      case '-':
+      case ECalcOperator.minus:
         this.subtract();
         break;
-      case '*':
+      case ECalcOperator.multiply:
         this.multiply();
         break;
-      case '/':
+      case ECalcOperator.divide:
         this.divide();
         break;
       default:
