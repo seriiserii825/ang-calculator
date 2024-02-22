@@ -1,0 +1,12 @@
+<div class="calculator">
+  <h2 class="calculator__title"> Calculator </h2>
+  <div class="calculator__wrap">
+    <input type="number" [(ngModel)]="firstNumber">
+    <select name="some_name" id="some_name" [(ngModel)]="operator">
+      <option *ngFor="let item of operators" [value]="item">{{item}}</option>
+    </select>
+    <input type="number" [(ngModel)]="secondNumber">
+    <button class="calculator__btn" (click)="calc()">Calculate</button>
+    <div class="calculator__result">{{result}}</div>
+  </div>
+</div>
