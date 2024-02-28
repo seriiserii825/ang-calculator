@@ -1,1 +1,7 @@
-<p>object-list works!</p>
+<ul class="object-list">
+  <li *ngFor="let object of object_list">
+    <a [routerLink]="['/object-list', object.id]">
+      {{ object.title }}
+    </a>
+  </li>
+</ul>

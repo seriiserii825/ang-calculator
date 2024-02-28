@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Enavigation} from '../../../enum/Enavigation';
 
 @Component({
   selector: 'app-object-list',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
 })
 
 export class ObjectListComponent {
-
+  public object_list: IObject[] = MyObjectList;
+  public ENavigation = Enavigation;
 }
 
 export const MyObjectList: IObject[] = [

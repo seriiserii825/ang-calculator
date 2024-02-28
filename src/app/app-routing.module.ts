@@ -2,16 +2,31 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CalculatorComponent} from './components/calculator/calculator.component';
 import {NotFoundComponent} from './components/not-found/not-found.component';
+import {Enavigation} from '../enum/Enavigation';
+import {ObjectListComponent} from './components/object-list/object-list.component';
+import {ObjectItemComponent} from './components/object-item/object-item.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'calculator',
+    redirectTo: Enavigation.calculator,
     pathMatch: 'full'
   },
   {
-    path: 'calculator',
+    path: Enavigation.calculator,
     component: CalculatorComponent
+  },
+  {
+    path: Enavigation.calculator,
+    component: CalculatorComponent
+  },
+  {
+    path: Enavigation.object_list,
+    component: ObjectListComponent
+  },
+  {
+    path: 'object-list/:id',
+    component: ObjectItemComponent
   },
   {
     path: '**',

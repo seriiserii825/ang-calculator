@@ -1,2 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import './app/components/calculator/calculator.component.scss'
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+@import './app/components/navigation/navigation.component.scss';
+@import './app/components/calculator/calculator.component.scss';
+@import './app/components/object-list/object-list.component.scss';
