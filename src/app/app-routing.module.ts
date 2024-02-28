@@ -5,6 +5,11 @@ import {NotFoundComponent} from './components/not-found/not-found.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'calculator',
+    pathMatch: 'full'
+  },
+  {
     path: 'calculator',
     component: CalculatorComponent
   },
